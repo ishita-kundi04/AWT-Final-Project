@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <style>
+
+            #body-header {
+                height: 70rem;
+                opacity: 0.8;
+                background-image: url(https://i.pinimg.com/originals/80/6d/6b/806d6b97c0f3194063250e416f00084f.jpg);
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                padding-top: 1.2rem;
+                animation: slider 25s infinite ease-in-out;
+            }
+
+            @keyframes slider {
+                0%{background-image: url(https://i.pinimg.com/originals/80/6d/6b/806d6b97c0f3194063250e416f00084f.jpg); }
+                25%{background-image: url(https://i.ytimg.com/vi/ejNIow5DPUM/maxresdefault.jpg); }
+                /* 40%{background-image: url(https://www.shutterbug.com/images/styles/600_wide/public/dreamstime_m_31731187_0.jpg); } */
+                /* 50%{background-image: url(https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500); } */
+                50%{background-image: url(https://www.urby.in/blog/wp-content/uploads/2017/09/photographycoverimg.jpg); }
+                75%{background-image: url(https://cdn.lynda.com/course/80300/80300-637491275762439075-16x9.jpg); }
+            }
+
+            /* nav */
+            .horizontal-list {
+                list-style: none;
+                padding-left: 0px;
+                margin: 0px;
+            }
+
+            .horizontal-list li {
+                display: inline-block;
+                margin: 0px 20px 20px 0px;
+                font-weight: 100;
+                font-size: 2.2rem;
+                font-family: Times New Roman;
+                font-weight: bold;
+            }
+
+            .horizontal-list li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .nav-menu li a {
+                transition: color 0.5s, border-bottom 4s;
+            }
+
+            .nav-menu li a:hover {
+                color: lightgrey;
+                border-bottom: 1px solid black;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            #title h1{
+                color: white;
+                text-shadow: 4px 4px 4px black;
+                font-family:Times, serif;
+                font-size: 17rem;
+                text-align: center;
+                margin-top: 12rem;
+                
+            }
+
+            header {
+                box-shadow: 4px 4px 5px black;
+            }
+
+            .navbar-custom {
+                background-color: whitesmoke;
+            }
+            
+            .topic {
+                font-weight: bolder ;
+                color: black;
+                font-size: 1.5rem;
+            }
+
+            .topic:hover {
+                text-decoration: underline;
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                height: fit-content;
+            }
+
+            section:nth-child(2n) {
+                background-color: #9e9b9b29;
+            }
+
+            section:nth-child(2n + 1) {
+                background-color: white;
+            }
+
+            #main{
+                width:100%;
+                /* border:2px solid black; */
+                display: flex;
+            }
+           
+            #right{
+                /* border: 2px solid rgb(10, 8, 8); */
+                width: 75%;
+                display: inline-block;
+                margin-top: 0%;
+                margin-left: 8px;
+            }
+
+            #dabbae {
+                border-left: 2px solid rgba(107, 86, 86, 0.842);
+                height: 640px;
+                width: 22%;
+                display: inline-block;
+                margin-left: 25px;
+                position: sticky;
+                top: 80px;
+            }
+
+            #top {
+                position: sticky;
+                top: 0px;
+                display: flex;
+            }
+
+            .photu {
+                display: inline-block;
+                /* border: 2px solid black; */
+                margin: 5px;
+                width: 45%;
+                height: 150px;
+            }
+
+            .photu img {
+                height: 135px;
+                width: 120px;
+                object-fit: contain;
+            }
+
+            .photu img:hover {
+                /* z-index: 0; */
+                filter: grayscale(100%);
+            }
+
+            /* Contact Form */
+
+            #contact {
+                background-color: #0abcf9;
+                background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+                color: white;
+                padding-bottom: 40px;
+            }
+
+            #contact h1,
+            #contact h1 span {
+                color: white;
+            }
+
+            #contact-form {
+                margin-left: 20%;
+            }
+
+            #contact-container {
+                display: flex;
+            }
+
+            #my-details-container {
+                width: 35%;
+                margin-left: 6%;
+            }
+
+            #my-details-container h3 {
+                color: white;
+                font-weight: 550;
+                font-size: 1.2rem;
+            }
+
+            #contact-form-container {
+                width: 50%;
+            }
+
+            #my-details-container p {
+                color: #d9dcdd;
+                font-size: 0.9rem;
+            }
+
+            .my-details-info-container {
+                margin-bottom: 20px;
+                color: #d9dcdd;
+                font-size: 1rem;
+            }
+
+            .my-details-info-container span {
+                margin-left: 0.4rem;
+            }
+
+            .my-details-info-container i {
+                color: white;
+            }
+
+            .my-details-icon {
+                width: 1rem;
+                height: 1rem;
+                vertical-align: bottom;
+                margin-right: 0.5rem;
+            }
+
+
+            #contact-form input,
+            textarea {
+                max-width: 90%;
+                margin: 15px;
+                padding: 4px 10px;
+                border: 0px solid transparent;
+                border-bottom: 2px solid white;
+                color: #d9dcdd;
+                background: transparent;
+                width: 90%;
+                line-height: 1.6;
+                font-size: 1.05rem;
+            }
+
+            #contact-form button[type="submit"] {
+                background: transparent;
+                font-size: 0.95rem;
+                border: 2px solid white;
+                margin-top: 5%;
+                margin-left: 35%;
+                border-radius: 2px;
+                color: white;
+                font-family: sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.046875em;
+                line-height: 1;
+                padding: 0.8em 0.8em 0.78em;
+                text-transform: uppercase;
+            }
+
+            .social-icons li a i {
+                padding: 10px;
+                font-size: 2rem;
+                border-radius: 50%;
+            }
+
+            .social-icons li a i:hover {
+                box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+            }
+
+
+            #contact-form button:hover {
+                background: white;
+                color: #13386fe0;
+            }
+
+            #contact .social-icons li a i {
+                font-size: 1.2rem;
+                margin: 40px 10px 10px;
+                padding: 10px 14px 20px 10px;
+
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
+            }
+
+            #imag3 {
+                display: flex;
+                width: 100%;
+                height: 300px;
+                /* border: 2px solid black; */
+                border-radius: 20%;
+            }
+
+            .im {
+                height: 90%;
+                width: 35%;
+                margin: 11px 18px;
+                justify-content: center;
+                /* border: 2px solid black; */
+                position:static;
+            }
+
+            .im img {
+                background-repeat : no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                height: 100%;
+                width: 100%;
+                border-radius: 10%;
+            }
+
+            .im img:hover {
+                transform: scale(1.2);
+            }
+
+            #sabseBadaDiv {
+                display: flex;
+                height: 1000px;
+                width: 100%;
+                /* border: 2px solid black; */
+            }
+
+            #div1 {
+                height: 100%;
+                width: 48%;
+                /* border: 2px solid black; */
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+            }
+
+            #div3 {
+                height: 100%;
+                width: 48%;
+                /* border: 2px solid black; */
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+            }
+
+            #div2line {
+                height: 90%;
+                width: 0px;
+                border-left: 2px dotted black;
+                border-right: 2px dotted black;
+                display: inline-block;
+                margin: 7px;
+            }
+
+            .leftInside {
+                height : 150px;
+                width : 80%;
+                /* border: 2px solid green; */
+                box-shadow: 3px 3px 4px grey;
+                margin: 90px 80px;
+                
+            }
+            
+            .rightInside {
+                height : 150px;
+                width : 80%;
+                /* border: 2px solid green; */
+                box-shadow: 3px 3px 4px grey;
+                margin-left: 42px;
+            }
+
+            #div2line .timeline-traveller {
+                position: sticky;
+                top: 300px;
+                z-index: 10;
+                
+            }
+
+            .glyphicon {
+                position: static;
+            }
+
+            /* Slide of Images Starts here */
+
+            .wrapper {
+                width: 100%;
+                height: 550px;
+                overflow: hidden;
+                border: 2px solid black;
+                box-shadow: 4px 4px 5px grey;
+                /* z-index: -50; */
+            }
+
+            .slides-container {
+                height : 500px;
+                position: relative;
+                width: 95%;
+                margin: 15px 25px;
+                /* border: 2px solid black; */
+                /* box-shadow: 4px 4px 5px grey; */
+                transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+                /* z-index: -40; */
+            }
+
+            .slides-image {
+                height: 100%;
+                width : 100%;
+                position: absolute;
+            }
+
+            .slides-image img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .next-btn, .prev-btn {
+                background-color: #eee;
+                padding: 16px;
+                position: absolute;
+                font-size: 20px;
+                box-shadow: 2px 4px 8px grey;
+                z-index: 100;
+                transition: 400ms;
+            }
+
+            .next-btn {
+                margin-top: -20%;
+                right: 380px;
+            }
+
+            .prev-btn {
+                margin-top: 15%;
+                left: 15px;
+            }
+
+            .next-btn:hover , .prev-btn:hover {
+                background-color: #45e5eb;
+            }
+
+            /* Navigation-Dots */
+
+            .single-dot {
+                background-color: #333;
+                height: 16px;
+                width: 16px;
+                border: 2px solid rgb(53, 50, 50);
+                border-radius: 50%;
+                cursor: pointer;
+                transition: 400ms;
+                margin: 0 8px;
+            }
+
+            .navigation-dots {
+                display: flex;
+                height: 32px;
+                align-items: center;
+                justify-content: center;
+                margin: 16px 0;
+            }
+
+            .single-dot.active {
+                background-color: rgb(173, 155, 155);
+                /* border-radius: 20%; */
+            }
+
+            /* Toggle divs */
+
+            /* .up-down {
+                width: 100%;
+                height : 80px;
+                border-top: 2px solid blue;
+                border-bottom: 2px solid blue;
+                padding: 15px;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                color: rgb(2, 2, 83);
+            }
+
+            .sidethree {
+                display:inline-block;
+                height: 100%;
+                width: 100px;
+            }
+
+            .need-to-be-toggled {
+                height: 250px;
+                width: 80%;
+                margin: 5px 15px;
+                border: 2px solid black;
+            }
+
+            .main {
+                height: 300px;
+                width: 100%;
+                border-top: 2px solid blue;
+                border-bottom: 2px solid blue;
+                padding: 15px;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+                font-weight: bold;
+                color: rgb(2, 2, 83);
+            }
+            
+            .yaha-click {
+                display: inline-block;
+            } */
+
+            /* Collage */
+
+            #collage {
+                border: 2px dotted black;
+                height: 800px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 25px 5px;
+            }
+        
+            .box {
+                height: 150px;
+                width: 250px;
+                /* border: 2px solid green; */
+                box-shadow: 4px 4px 6px grey;
+                overflow: hidden;
+                border-radius: 20px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                padding: 0;
+            }
+
+            .box img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                
+            }
+
+            .content {
+                opacity: 0;
+                font-size: 2.5rem;
+                font-weight: bold;
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: #0a0b0c;
+                background-color: rgba(200, 200, 200, 0.5);
+                width: 100%;
+                height: 100%;
+                -webkit-transition: all 400ms ease-out;
+                -moz-transition: all 400ms ease-out;
+                -o-transition: all 400ms ease-out;
+                -ms-transition: all 400ms ease-out;
+                transition: all 400ms ease-out;
+                text-align: center;
+            }
+
+            .box .content:hover {
+                opacity: 1;
+            }
+
+            .box .content .text {
+                height: 0;
+                opacity: 1;
+                transition-delay: 0s;
+                transition-duration: 1s;
+            }
+
+            .box .content:hover .text {
+                opacity: 1;
+                transform: translateY(50px);
+                -webkit-transform: translateY(50px);
+            }
+
+            /* camera lenses */
+
+            .camera-lenses {
+                border: 2px solid black;
+                height: 400px;
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .camera-lens-dabba {
+                height: 100%;
+                width: 32%;
+                border: 2px dotted grey; 
+                box-shadow: -4px 4px 5px rgb(51, 47, 47);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .camera-photu {
+                /* border: 2px solid green; */
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+            }
+
+            .camera-photu img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .camera-detail {
+                /* border: 2px solid blue; */
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .thumb , .save {
+                /* border: 2px solid black; */
+                height: 90%;
+                width: 60px;
+                border-radius: 50%;
+                box-shadow: 2px 2px 4px grey;
+                text-align: center;
+                padding: 17px;
+                font-size: 2.5rem;
+            }
+
+            .thumb:hover , .save:hover {
+                box-shadow: 3px 3px 4px rgb(53, 50, 50);
+                background-color: lightgoldenrodyellow;
+                color: green;
+            }
+
+            .max-div {
+                width: 100%;
+                height: 550px;
+                border: 2px solid black;
+                display: flex;
+            }
+
+            .div-1 {
+                height: 100%;
+                width: 40%;
+                /* border: 2px solid red; */
+                padding: 20px;
+            }
+
+            .div-2 {
+                height: 100%;
+                width: 60%;
+                /* border: 2px solid green; */
+                padding: 10px;
+                display:flex;
+                position: relative;
+            }
+
+            .photo-on-click , .define-photo{
+                height: 240px;
+                width: 80%;
+                border: 2px dotted grey;
+                margin-left: 30px;
+            }
+
+            .div-2 img {
+                height: 95%;
+                width: 95%;
+                object-fit: cover;
+                position: absolute;
+            }
+
+            .plus-circle {
+                height: 60px;
+                width: 60px;
+                border: 4px solid orange;
+                background-color: #d9dcdd;
+                border-radius: 50%;
+                z-index: 20;
+                position: relative;
+                /* padding: 4px; */
+                text-align: center;
+                font-size: 4rem;
+                color: black;
+                cursor: pointer;
+                /* justify-content: center; */
+            }
+
+            .plus-circle:hover {
+                background-color: yellow;
+            }
+
+            .div-2 .one {
+                margin-top: 100px;
+                margin-left: 0px;
+            }
+
+            .div-2 .two {
+                margin-top: 150px;
+                margin-left: 180px;
+            }
+
+            .div-2 .three {
+                margin-top: 280px;
+                margin-left: 12px;
+            }
+
+            .div-2 .four {
+                margin-top: 440px;
+                margin-left: -180px;
+            }
+
+            .photo-on-click img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                display:block;
+            }
+
+            #btn1 {
+                height: 50px;
+                border-radius: 50%;
+                width: 50px;
+                border: 1px solid #eee;
+                background-color: #eee;
+            }
+
+            #btn2 {
+                height: 50px;
+                border-radius: 50%;
+                width: 50px;
+                border: 1px solid #eee;
+                background-color: #eee;
+            }
+
+            #btn3 {
+                height: 50px;
+                border-radius: 50%;
+                width: 50px;
+                border: 1px solid #eee;
+                background-color: #eee;
+            }
+
+            #btn4 {
+                height: 50px;
+                border-radius: 50%;
+                width: 50px;
+                border: 1px solid #eee;
+                background-color: #eee;
+            }
+
+            #btn1:hover, #btn2:hover, #btn3:hover, #btn4:hover {
+                background-color: yellow;
+            }
+
+            /* Sign in */
+
+            /*add full-width input fields*/
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+    button {
+        /* background-color: green;
+        color: white; */
+        padding: 2px;
+        cursor: pointer;
+        width: 100%;
+        border: 1px solid #eee;
+    }
+    /*set styles for the cancel button*/
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%
+    }
+    /*add padding to container elements*/
+    .container {
+        padding: 16px;
+    }
+    /*define the modal’s background*/
+     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+    /*define the modal-content background*/
+     
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    /*define the close button*/
+     
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        color: #000;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    /*define the close hover and focus effects*/
+     
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+     
+    /* @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    } */
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <header id="body-header">
+            <nav>
+
+                <ul class="horizontal-list text-center nav-menu">
+                    <li>
+                        <a href="#"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#Content"> Contents </a>
+                    </li>
+                    <li>
+                        <a href="#Exhibition"> Exhibitions </a>
+                    </li>
+                    <li>
+                        <a href="#Examples">Examples</a>
+                    </li>
+                    <li>
+                        <a href="#Lenses">Lenses</a>
+                    </li>
+                    <li>
+                        <a href="#Categories">Characterstics</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="title">
+                <h1>The Artsy <br>Lens</h1>
+            </div>
+       
+        </header>
+<div id="top" style="z-index: 800;">
+        <nav class="navbar navbar-custom" style="width: 200rem; box-shadow: 3px 3px 4px grey; overflow: hidden; ">
+            <div class="container-fluid">
+              <ul class="nav navbar-nav">
+                <li><a href="#Home" style="text-decoration: none;"><span class="topic">Home</span></a></li>
+                <li><a href="#Content" style="text-decoration: none;"><span class="topic">Contents</span></a></li>
+                <li><a href="#Exhibition" style="text-decoration: none;"><span class="topic">Exhibitions</span></a></li>
+                <li><a href="#Examples" style="text-decoration: none;"><span class="topic">Examples</span></a></li>
+                <li><a href="#Lenses" style="text-decoration: none;"><span class="topic">Lenses</span></a></li>
+                <li><a href="#categories" style="text-decoration: none;"><span class="topic">Characterstics</span></a></li>
+                <li><a href="#contact" style="text-decoration: none;"><span class="topic">Contact Us</span></a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 
+                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+ 
+                        <div id="id01" class="modal">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                            <form class="modal-content animate" action="/action_page.php">
+                                <div class="container">
+                                    <label><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email" required>
+ 
+                                    <label><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw" required>
+ 
+                                    <label><b>Repeat Password</b></label>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                    <input type="checkbox"> Remember me
+                                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+ 
+                                    <div class="clearfix">
+                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn"><b>Cancel</b></button>
+                                        <button type="submit" class="signupbtn" style="background-color: green; padding: 14px 20px"><b>Sign Up</b></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                </a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 
+                    Login
+                </a></li>
+              </ul>
+            </div>
+        </nav>
+</div>
+        <div id="main">
+          <div id="right">
+
+            <section id="Home">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif;"><span class="glyphicon glyphicon-camera"></span> &nbsp;<u>What Is Photography?</span></u></b></h2>
+                <span style="font-size: 2rem;
+                color: rgb(77, 70, 70);
+                line-height: 28px;
+                font-size: 2rem;
+                text-align: 
+                justify;padding: 10px;">
+                Photography is the art of capturing light with a camera, usually via a digital sensor or film, to create an image. With the right camera equipment, you can even photograph wavelengths of light invisible to the human eye, including UV, infrared, and radio.
+                <br>
+                The first permanent photograph was captured in 1826 (some sources say 1827) by Joseph Nicéphore Niépce in France. It shows the roof of a building lit by the sun.
+                A Brief History of Photography and the People Who Made It Succeed
+                Color photography started to become popular and accessible with the release of Eastman Kodak’s “Kodachrome” film in the 1930s. Before that, almost all photos were monochromatic – although a handful of photographers, toeing the line between chemists and alchemists, had been using specialized techniques to capture color images for decades before. You’ll find some fascinating galleries of photos from the 1800s or early 1900s captured in full color, worth exploring if you have not seen them already.
+                <br>
+                These scientist-magicians, the first color photographers, are hardly alone in pushing the boundaries of one of the world’s newest art forms. The history of photography has always been a history of people – artists and inventors who steered the field into the modern era.
+                <br>
+                So, below, you’ll find a brief introduction to some of photography’s most important names. Their discoveries, creations, ideas, and photographs shape our own pictures to this day, subtly or not. Although this is just a brief bird’s-eye view, these nonetheless are people you should know before you step into the technical side of photography:
+                </span>
+                <br>
+                <div id="imag3">
+
+                    <div class="im"><img src="https://i.ytimg.com/vi/to1znxcTfG0/maxresdefault.jpg"></div>
+                    <div class="im"><img src="https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/wildlife_photography_feature_image.jpg"></div>
+                    <div class="im"><img src="https://cdn.lynda.com/course/80300/80300-637491275762439075-16x9.jpg"></div>
+
+                </div>
+            </section>
+
+
+            <section id="Content">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif; font-size: 5rem;"><u>Contents</span></u></b></h2>
+
+                <div id="sabseBadaDiv">
+                    <div id="div1">
+                        <div class="leftInside"><img src="https://image.shutterstock.com/image-vector/exhibition-colorful-typography-text-banner-260nw-1844844475.jpg" style="height: 100%; width: 100%; "></div>
+                        <div class="leftInside"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\camera.png" style="height: 100%; width: 100%;"></div>
+                        <div class="leftInside"><img src="https://thumbs.dreamstime.com/b/categories-written-wooden-blocks-arranged-word-67736405.jpg" style="height:100%; width:100%;"></div>
+                    </div>
+
+                    <div id="div2line">
+                        <!-- <span class="glyphicon glyphicon-plane"></span> -->
+                        
+                            <div class="timeline-traveller">
+                                <div>
+                                    <span class="glyphicon glyphicon-plane" style="transform: scale(3.8) rotate(180deg); margin-left:-5px; color: rgb(16, 2, 65); position: static;"></span>
+                                </div>
+                            </div>
+                        
+                    </div>
+
+                    <div id="div3">
+                        <div class="rightInside" style="margin-top: 250px;"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\cozyClick.png" style="height: 100%; width: 100%;"></div>
+                        <div class="rightInside" style="margin-top: 200px"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\background.png" style="height: 100%; width: 100%; "></div>
+                        
+                    </div>
+                </div>
+
+
+            </section>
+
+
+               <section id="Exhibition">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif; font-size: 5rem;"><u>Exhibitions</span></u></b></h2>
+                <span style="font-size: 2rem;
+                color: rgb(77, 70, 70);
+                line-height: 28px;
+                font-size: 2.2rem;
+                text-align: left;
+                line-height: 35px;
+                padding: 10px;">
+
+                There is nothing like having your work displayed up on a wall for everyone to see. Even better, <br>
+                is seeing little round red stickers underneath to indicate that the work has been sold. For most artists, <br>
+                that is their driving force and anyone who makes images that are intended for walls and display. However, <br>
+                where and how to go about having a photography exhibition can be harder than you think. It can also be a <br>
+                very expensive exercise.<br><br>
+                Keepthinking offers innovative content and collection management software solutions, as well as design and <br>
+                development of web and mobile applications. We conceive beautiful interfaces, combined with solid technology <br>
+                and strong usability and accessibility principles, to help our customers manage and present their information. <br><br>
+                The Sony World Photography Awards travels extensively each year, giving photographers even more exposure in a multitude <br>
+                of different countries. Exhibitions in the past have visited (among other places) New York, Milan, Paris, Berlin, <br>
+                Liverpool, Moscow, and Rio de Janeiro.<br><br>
+
+                For Sony World Photography Awards 2020, the virtual exhibition programme has been created to give people around <br>
+                the world the opportunity to see curated displays specific to certain countries. See 2020 Traveling <br>
+                Exhibitions section for more details. <br>
+                The Active Eye was a 1975 exhibition of work by contemporary New Zealand photographers, originated by <br>
+                the Manawatu Art Gallery in Palmerston North and touring to other galleries around New Zealand. <br>
+                The exhibition was one of the first to focus on contemporary photography in New Zealand, and attracted <br>
+                considerable controversy around the works included by artist Fiona Clark.<br>
+
+                </span>
+
+               </section>
+
+               <div class="wrapper">
+                <div class="prev-btn" style="border: 2px solid black;"><i class="fas fa-chevron-left"></i></div>
+
+                <div class="slides-container">
+                    <div class="slides-image">
+                        <img src="https://s01.sgp1.digitaloceanspaces.com/large/895260-squxdgdmyl-1537877992.jpg">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://api.time.com/wp-content/uploads/2014/10/313.jpg" style="margin-left: 1100px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://i.pinimg.com/originals/ed/b6/83/edb6832edf8c755dcef64331612031be.jpg" style="margin-left: 2200px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://bloximages.newyork1.vip.townnews.com/mcdowellnews.com/content/tncms/assets/v3/editorial/7/1e/71e64f40-361f-11e9-8dea-c70f65739f2d/5c6f17f199020.image.jpg?resize=1200%2C900" style="margin-left: 3300px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://s.studiobinder.com/wp-content/uploads/2021/02/Creative-Photography-Ideas-Techniques-To-Get-You-Inspired-StudioBinder.jpeg" style="margin-left: 4400px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://i.ytimg.com/vi/MOXt40uDooQ/maxresdefault.jpg" style="margin-left: 5500px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://www.globaltimes.cn/Portals/0/attachment/2020/2020-12-20/f5b72b79-6ebd-4678-b19e-8e587e676a67.jpeg" style="margin-left: 6600px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://i.pinimg.com/originals/60/23/b7/6023b71c7053379aefa0fe2007c42106.jpg" style="margin-left: 7700px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j.jpg" style="margin-left: 8800px;">
+                    </div>
+                    <div class="slides-image">
+                        <img src="https://expertphotography.com/wp-content/uploads/2019/09/Urban_landscape_fence_1200-1024x683.jpg" style="margin-left: 9900px;">
+                    </div>
+                </div>
+
+                <div class="next-btn" style="border: 2px solid black;">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+
+                Use the next & previous button to see the slides.
+
+            </div>
+
+            <!-- <div class="navigation-dots">
+                <div class="single-dot active"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+                <div class="single-dot"></div>
+            </div> -->
+
+                <section></section>
+
+               <section id="Examples">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif; font-size: 5rem;"><u>Types Of Photography</span></u></b></h2>
+                <span style="font-size: 2rem;
+                color: rgb(77, 70, 70);
+                line-height: 28px;
+                font-size: 2.2rem;
+                text-align: left;
+                line-height: 35px;
+                padding: 10px;">
+                Because photography encompasses so many niches, there are hundreds of types to follow and try. <br>
+                These photography niches also define the personality and taste of a particular photographer. <br>
+                The equipment needed for the different types of photography varies somewhat as well.<br><br>
+
+                <span class="glyphicon glyphicon-list-alt"></span> &nbsp;Some examples of types of photography include: <br>
+
+                <ol>
+                    <li>Black and White Photography</li>
+                    <li>Experimental Photography</li>
+                    <li>Travel Photography</li>
+                    <li>Landscape Photography</li>
+                    <li>Advertising Photography</li>
+                    <li>Wedding Photography</li>
+                    <li>HDR Photography</li>
+                    <li>Fashion Photography</li>
+                    <li>Aerial Photography</li>
+                    <li>Street Photography</li>
+                    <li>Sports Photography</li>
+                    <li>Portrait Photography</li>
+                    <li>Still Life Photography</li>
+                    <li>Abstract Photography</li>
+                    <li>Photojournalism</li>
+                </ol>
+                </span>
+
+                <div id="collage">
+                    <div class="box">
+                        <div>
+                            <img src="https://blinq.art/blog/wp-content/uploads/2018/04/blinq-art-black-white-default.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Black and White <br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="http://cottonridgellc.com/wp-content/uploads/2012/12/Photo-Extremist-on-Flickr.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Experimental<br>Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\travel.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Travel<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\landscape.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Landscape <br>Photography</div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\advertisement.jpeg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Advertising<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6XrEVIqlLUs45nTy8QBIqrL5nUFKisXEQoQ&usqp=CAU">
+                        </div>
+                        <div class="content">
+                            <div class="text">Wedding<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\hdr.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">HDR<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="https://www.adorama.com/alc/wp-content/uploads/2014/09/shutterstock_188815022-1024x576.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Fashion<br>Photography</div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="box">
+                        <div>
+                            <img src="https://cdn.britannica.com/67/143567-050-B54AD471/photograph-neighbourhood-shot-airplane.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Aerial<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\street.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Street<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="https://images.ctfassets.net/u0haasspfa6q/2xl0w4P7lIAVEESotMPxlF/12eb1aba070dfbbbd0d0c1127798abec/AMA_EVERTON_LIVERPOOL_RJB_27">
+                        </div>
+                        <div class="content">
+                            <div class="text">Sports<br> Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="https://i.ytimg.com/vi/FBz81ssJV7g/maxresdefault.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Portrait<br> Photography</div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\stillife.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Still Life <br>Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\abstract.png">
+                        </div>
+                        <div class="content">
+                            <div class="text">Abstract <br>Photography</div>
+                        </div>
+                    </div>
+
+
+                    <div class="box">
+                        <div>
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\journlism.jpg">
+                        </div>
+                        <div class="content">
+                            <div class="text">Photojournalism</div>
+                        </div>
+                    </div>
+                </div>
+
+               </section>
+
+
+               <section id="Lenses">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif; font-size: 5rem;"><u>Lenses</span></u></b></h2>
+                <span style="font-size: 2rem;
+                color: rgb(77, 70, 70);
+                line-height: 28px;
+                font-size: 2.2rem;
+                text-align: left;
+                line-height: 35px;
+                padding: 10px;">
+                Camera lens is the most important part of a camera. A camera sensor records the light, but it’s the lens’s duty to <br>
+                focus the light properly in the sensor, so that the image is recognizable.<br><br>
+
+                Without the lens, the light falling in the sensor will result in a unfocused, blurry and meaningless blob like <br>
+                this. because reflected and scattered light will fall on the sensor from various angles without making any sense.<br>
+                Camera body is just a container to house the sensor and the lens along with the electronics and controls. <br>
+                Camera body does not have any impact on the photo quality.<br><br>
+
+                It is possible to shoot a photo even without using a camera body. In earlier days, before the Digital cameras <br>
+                became popular, it was possible to focus light directly onto the photographic paper using only a lens. They used <br>
+                this technique if you had a photographic film containing a negative from a previously shot photo. If you take <br>
+                the negative to the studio, they will focus light passing through the film directly onto photo paper and you will <br>
+                get new copies of your old photo without the need of a camera body.<br><br>
+
+                In today’s digital world you can also take artistic abstract images without a lens. this art is called Refractography.<br>
+                People expert in this area uses everyday objects like glass bottles, marbles, paperweights or mirrors to <br>
+                strategically throw light directly on the sensor without using a lens.<br><br>
+
+                Camera Body:<br>
+                The body is the casing for the sensor, which houses some of the other setting options such as ISO, shutter speed, <br>
+                picture quality and in case of Sony cameras, vibration reduction too.<br>
+                Lens:<br>
+                The lens is responsible for directing the incident light to the sensor and hence make a photo. The focusing, <br>
+                focal length, aperture, depth of field are the factors which the lens affects.<br><br>
+
+                Dslr is made up of two main components body and lens. we shoukd keep in mind that there shoukd always be the <br>
+                ratio of 1:3 in between body and lens. Higher the lens better tge quality of picture. We should also see towords the <br>
+                body that it has better iso, apperture, shutter speed etc.<br><br>
+
+                <div class="camera-lenses">
+                    <div class="camera-lens-dabba">
+                        <div class="camera-photu"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\dslr4.jpg"></div>
+                        <div class="camera-detail">
+                            <div class="thumb" onclick="up1()"><span class="glyphicon glyphicon-thumbs-up"></span></div><div class="thumb" onclick="down1()"><span class="glyphicon glyphicon-thumbs-down"></span></div><div class="save" onclick="save1()"><span class="glyphicon glyphicon-bookmark"></span></div>
+                        </div>
+                    </div>
+                    <div class="camera-lens-dabba">
+                        <div class="camera-photu"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\panasonic.jpeg"></div>
+                        <div class="camera-detail">
+                            <div class="thumb" onclick="up2()"><span class="glyphicon glyphicon-thumbs-up"></span></div><div class="thumb" onclick="down2()"><span class="glyphicon glyphicon-thumbs-down"></span></div><div class="save" onclick="save2()"><span class="glyphicon glyphicon-bookmark"></span></div>
+                        </div>
+                    </div>
+                    <div class="camera-lens-dabba">
+                        <div class="camera-photu"><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\nikon.jpg"></div>
+                        <div class="camera-detail">
+                            <div class="thumb" onclick="up3()"><span class="glyphicon glyphicon-thumbs-up"></span></div><div class="thumb" onclick="down3()"><span class="glyphicon glyphicon-thumbs-down"></span></div><div class="save" onclick="save3()"><span class="glyphicon glyphicon-bookmark"></span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                “You don’t make a photograph just with a camera. You bring to the act of photography all the pictures you have seen, <br>
+                the books you have read, the music you have heard, and the people you have loved.” said Ansel Adams, a famous photographer.<br> 
+                Photos make up who people are and what they have done in their lives and the way the photographer captures their perfect <br>
+                scene reveals how they perceive the world and the people around them.<br>
+
+                </span>
+               </section>
+
+
+               <section id="Categories">
+                <h2><b><span style="font-family: 'Times New Roman', Times, serif; font-size: 5rem;"><u>Characteristics of a Digital SLR Camera</span></u></b></h2>
+                <div class="max-div">
+                    <div class="div-1">
+                        <div class="photo-on-click">
+                            <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\precision.jpg" id="dslrimage">
+                        </div>
+
+                        <div class="define-photo">
+                            <span style="font-size: 2rem; ">
+                                <b>Precision optical viewfinder</b><br><br>
+
+                                With Nikon’s optical viewfinders, you 
+                                see what the lens sees—without any 
+                                delay and in real time. This is ideal 
+                                for sports, action and low light 
+                                shooting.
+                            </span>
+                            
+                        </div>
+
+                    </div>
+                    <div class="div-2">
+                        <img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\main-camera.jpg">
+                        <div class="plus-circle one"><button id="btn1">+</button></div>
+                        <div class="plus-circle two"><button id="btn2">+</button></div>
+                        <div class="plus-circle three"><button id="btn3">+</button></div>
+                        <div class="plus-circle four"><button id="btn4">+</button></div>
+                    </div>
+                </div>
+
+
+               </section>
+
+
+          </div>
+
+            <aside id="dabbae">
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Basics.png"></a></div>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\BlackandWhite.png"></a></div><br>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Wildlife.png"></a></div>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Landscape.png"></a></div><br>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Macro.png"></a></div>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Creativity.png"></a></div>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\Portrait.png"></a></div>
+                <div class="photu"><a href=""><img src="C:\Users\hp\Desktop\AWT Project FINAL\Media\NightSky.png"></a></div>
+            </aside>
+        </div>
+
+        <section id="contact">
+            <h1 class="section-heading mb50px">
+                <span>
+                    <i class="far fa-address-card"></i>
+                </span>
+                <span style="font-size: 5rem; font-family:'Times New Roman', Times, serif;"><u> Contact </u></span>
+            </h1>
+            <div id="contact-container">
+
+                <div id="contact-form-container">
+                    <form id="contact-form" style="font-size: 2rem;">
+                        <input id="input-name" name="name" type="text" placeholder="Your Name" style="font-size: 1.5rem;">
+                        <input id="input-email" name="input-email" type="text" required placeholder="Your Email" style="font-size: 1.5rem;">
+                        <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message" style="font-size: 1.5rem;"></textarea>
+                        <button class="sub-btn" type="submit" style="font-size: 1.5rem;">SEND MESSAGE</button>
+                    </form>
+                </div>
+                <div id="my-details-container" style="font-size: 3rem;">
+
+                    <h2>Get in touch</h2>
+                    
+                    <h3> My Address </h3>
+                    <div class="my-details-info-container" style="font-size: 1.5rem;">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span>Pinjore, Haryana</span>
+                    </div>
+                    <div class="my-details-info-container" style="font-size: 1.5rem;">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                        <span>9999999999</span>
+                    </div>
+                    <div class="my-details-info-container" style="font-size: 1.5rem;">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span>myemail@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center social-icons">
+
+                <ul class="horizontal-list">
+
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-stack-overflow" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://plus.google.com/u/0/103030702784925512939" target="_blank">
+                            <i class="fab fa-google-plus-g" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" target="_blank">
+                            <i class="fab fa-quora" style="font-size: 2.5rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
